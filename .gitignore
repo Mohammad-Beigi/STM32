@@ -17,6 +17,7 @@
 *.pch
 
 # Libraries
+/lib
 *.lib
 *.a
 *.la
@@ -50,3 +51,20 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Misc
+*.map
+*.m
+*.png
+
+# Eclipse CDT project files
+.cproject
+.project
+.settings/
+
+# Vagrant directory
+.vagrant/
+
+# Include makefiles
+!Makefile
+*~

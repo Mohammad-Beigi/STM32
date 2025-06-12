@@ -10,8 +10,8 @@
 ]>
 
 <targetDefinitions>
-  <board id="pr01_uart">
-    <name>pr01_UART</name>
+  <board id="pr02_uart">
+    <name>pr02_UART</name>
     <dbgIF>SWD</dbgIF>
     <dbgDEV>ST-Link</dbgDEV>
     <mcuId>stm32f103c6tx</mcuId>

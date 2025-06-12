@@ -6,11 +6,15 @@
  */
 
 // Include
-#include <stm32f1xx_hal.h>
+#include "stm32f1xx_hal.h"
 #include "main.h"
 
 // Function Declaration
 void SystemClockConfig(void);
+void UART2_Init(void);
+
+// Global Variable
+
 
 // Main Function
 int main(void)
@@ -23,6 +27,11 @@ int main(void)
 
 // Function Definitions
 void SystemClockConfig(void)
+{
+
+}
+
+void UART2_Init()
 {
 
 }

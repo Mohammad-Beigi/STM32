@@ -27,6 +27,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart)
 	// Low level inits of the USART2 peripheral
 
 	// 1. Enable the clock for the USART2 peripheral
+	__HAL_RCC_USART2_CLK_ENABLE();
 
 	// 2. Do the pin muxing configurations
 

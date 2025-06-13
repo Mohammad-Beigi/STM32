@@ -45,4 +45,6 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart)
 	HAL_GPIO_Init(GPIOA, &UART2_RX);
 
 	// 3. Enable the IRQ and set up the priority (NVIC)
+	HAL_NVIC_EnableIRQ(USART2_IRQn);
+	HAL_NVIC_SetPriority(USART2_IRQn, 15, 0);
 }

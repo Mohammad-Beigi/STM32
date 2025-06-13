@@ -30,6 +30,19 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart)
 	__HAL_RCC_USART2_CLK_ENABLE();
 
 	// 2. Do the pin muxing configurations
+	GPIO_InitTypeDef UART2_TX;
+	UART2_TX.Pin 	= GPIO_PIN_2;
+	UART2_TX.Mode 	= GPIO_MODE_AF_PP;
+	UART2_TX.Pull 	= GPIO_PULLUP;
+	UART2_TX.Speed 	= GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(GPIOA, &UART2_TX);
+
+	GPIO_InitTypeDef UART2_RX;
+	UART2_RX.Pin	= GPIO_PIN_3;
+	UART2_RX.Mode	= GPIO_MODE_AF_INPUT;
+	UART2_RX.Pull	= GPIO_PULLUP;
+	UART2_RX.Speed	= GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(GPIOA, &UART2_RX);
 
 	// 3. Enable the IRQ and set up the priority (NVIC)
 }

@@ -6,6 +6,7 @@
  */
 
 // Include
+#include <string.h>
 #include "stm32f1xx_hal.h"
 #include "main.h"
 
@@ -17,11 +18,21 @@ void Error_handler(void);
 // Global Variable
 UART_HandleTypeDef huart2;
 
+char *user_data = "The application is running!\r\n";
+
 // Main Function
 int main(void)
 {
 	HAL_Init();
 	SystemClockConfig();
+	UART2_Init();
+
+	if ( HAL_UART_Transmit(&huart2, (uint8_t*)user_data, strlen(user_data), HAL_MAX_DELAY) != HAL_OK)
+	{
+		Error_handler();
+	}
+
+	while (1);
 
 	return 0;
 }
